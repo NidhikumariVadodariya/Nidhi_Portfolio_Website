@@ -1,0 +1,310 @@
+/* CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body { /* this is how the whole website's text and background decoration (stay the same almost white and black) */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f8fafc;
+    color: #111827;
+
+    letter-spacing: 0.3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header { /* this is how header looks like in color, position setup and stays sticky to its position */
+    background: #0f172a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar { /* for header navigation links comes/displays in center */
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 22px;
+} 
+
+.nav-links { /* for header links set up (Home, About, Skills, Projects, Contact) */
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a { /* for header navigation links showing white untill its hover... */
+    color: white;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover { /* for header navigation links showing blue on its hover the cursor... */
+    color: #38bdf8;
+}
+
+.nav-links a.active {
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+  padding-bottom: 4px;
+}
+
+.menu-btn {    /* for toggle menu button */
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.hero { /* style to the intro section */
+    min-height: 90vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 8%;
+
+    scroll-margin-top: 90px;
+
+}
+
+.hero-content {   /*Need to find out exactly */
+    max-width: 850px;
+}
+
+.badge {  /* style of the font of "Open to Web Development, Web Design, and CMS roles" */
+    display: inline-block;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    padding: 8px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hero h1 {  /* style to the intro section (After name line) */
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.hero h3 {  /* style of the font of "Web Designer & Front-End Developer" */
+    font-size: 24px;
+    color: #38bdf8;
+    margin-bottom: 18px;
+}
+
+.hero p {   /* style after the line font of "Web Designer & Front-End Developer" */
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {   /* style to the buttons of View projects and Contact me and at last Download Resume */
+    display: inline-block;
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 8px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {  /* When you hover the cursor on the buttons of above */
+    transform: translateY(-3px);
+    background: #0ea5e9;
+}
+
+.btn.secondary { /* Style Contact me button to highlight it */
+    background: transparent;
+    color: white;
+    border: 2px solid #38bdf8;
+}
+
+.section {  /* Style to and from all About me section */
+    padding: 75px 8%;
+    max-width: 1200px;
+    margin: auto;
+
+    scroll-margin-top: 90px;
+}
+
+.section-title { /* Style to and from all About me and other titles like Skills and others section  */
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 35px;
+    color: #0f172a;
+}
+
+.about-content { /* Style to all About me section paragraphs */
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content p { /* Style to all About me section paragraphs */
+    margin-bottom: 16px;
+    font-size: 17px;
+}
+
+.grid {  /* Skills' and Projects' layout and style have been changed */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.card { /* Card is the class of all three Skills and Projects so it help to style those three skills and Projects differently */
+    background: white;
+    padding: 26px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    transition: 0.3s ease;
+}
+
+.card:hover { /* When you hover the cursor on the columns of the all three Skills and Projects to highlight when cursor is on it */
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 { /* Skills' and Projects' head fonts are styled */
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.card p { /* Skills' and Projects' paragraphs' fonts are styled */
+    margin-bottom: 12px;
+}
+
+.project-links { /* Project links Live Demo and GitHub's top-margin are been set up */
+    margin-top: 16px;
+}
+
+.project-links a { /* Project links Live Demo and GitHub's right-margin are been set up */
+    color: #0284c7;
+    font-weight: bold;
+    margin-right: 14px;
+}
+
+.project-links a:hover {  /* When you hover the cursor on the Project links of Live Demo and GitHub */
+    color: #0369a1;
+}
+
+.contact-box { /* Contact box is styled with round border radious and font style */
+    background: white;
+    padding: 35px;
+    border-radius: 14px;
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-box p { /* Contact box is styled with paragraph margin */
+    margin-bottom: 12px;
+}
+
+footer {  /* Footer has been set like header attributes */
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) { 
+    /* this will allow and help you to set the screen according to all current mobile screens */
+    /* media helps to set the buttons in toggle menu for three lines like drop down menu */
+
+    .navbar {
+        position: relative;
+    }
+
+    .menu-btn { /* this will allow you to set the dropdown menu box like its joint to the button when cursor clicks on it so it opens (mostly when you open in mobile) */
+        display: block;
+        position: absolute;
+        right: 2%;
+        top: 14px;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .nav-links { /* this will do dropdwon menu opens from the togglemenu button */
+        position: absolute;
+        top: 58px;
+        right: 2%;
+        background: #0f172a;
+        flex-direction: column;
+        width: 220px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+        display: flex;
+        opacity: 0;
+        transform: translateY(-15px);
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active { /* this will do dropdown when pointer events turn on (or when clicks) */
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h3 {
+        font-size: 20px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width: 480px) {   /* this will allow and help you to set the screen according to all mobile screens */
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}
