@@ -42,7 +42,16 @@ header { /* this is how header looks like in color, position setup and stays sti
 .logo {
   color: white;
   font-size: 22px;
-} 
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: #38bdf8;
+}
 
 .nav-links { /* for header links set up (Home, About, Skills, Projects, Contact) */
     list-style: none;
